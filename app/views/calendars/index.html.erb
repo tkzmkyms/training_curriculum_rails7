@@ -12,11 +12,12 @@ issue3-1 div消去
 
 issue3-2 div消去
 <div>
+  <!-- issue5 表示したい箇所は、<%= %>にする！ -->
   <div class='calendar'>
     <% @week_days.each do |day| %>
       <div class='item'>
         <div class='date'>
-          <% day[:month] %>/<% day[:date] %>
+          <%= day[:month] %>/<%= day[:date] %><%= day[:wday] %>  
         </div>
         <ul class='content'>
         <% if day[:plans].length != 0 %>
