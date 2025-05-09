@@ -41,7 +41,7 @@ class CalendarsController < ApplicationController
         wday_num = wday_num -7
       end
       #issue6-1 曜日をindex.html.erbに渡す
-      days = { :month => (@todays_date + x).month, :date => (@todays_date+x).day, :wday  => wdays[(@todays_date + x).wday], :plans => today_plans}
+      days = { month: (@todays_date + x).month, date: (@todays_date + x).day, wday: wdays[(@todays_date + x).wday], plans: today_plans }
       @week_days.push(days)
     end
 
